@@ -4,7 +4,7 @@ LeParc-LC
 
 code:
 
-snip('example1')
+snip('example1') // Evaluar para cargar snippet / Eval for load snippet
 
 function setup() {
 	rectMode(CENTER)
