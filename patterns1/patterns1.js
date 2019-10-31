@@ -2,22 +2,34 @@
 Ejemplo de snippet / Snippet example
 LeParc-LC
 
+MyPattern:
+
+Create a grid
+
+
 code:
 
-snip('example1') // Evaluar para cargar snippet / Eval for load snippet
+snip('patterns1') // Evaluar para cargar snippet / Eval for load snippet
 
 function setup() {
 	rectMode(CENTER)
 }
 
 function draw() {
-	displace(-1, 0)
+      displace(-1, 0)
+
+      // MyPattern(cell_width, cell_height, (posx, posy, get_cell_w, get_cell_h)
 	MyPattern(50, 80, (x, y, cx, cy) => {
+
+            // hacer algo / do somethig
 		stroke(255)
 		fill(0, 20)
 		beginRot(counter(), x, y)
-		rect(x, y, cx, cy)
-		endRot()
+            // rect(x, y, cx, cy)            
+		rect(x, y, 40, 45)
+            endRot()
+            // ----------------------
+
 	})
 }
 */
