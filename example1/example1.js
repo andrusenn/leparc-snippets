@@ -15,7 +15,7 @@ function draw() {
 	MyPattern(50, 80, (x, y, cx, cy) => {
 		stroke(255)
 		fill(0, 20)
-		beginRot(freq(0.02), x, y)
+		beginRot(counter(), x, y)
 		rect(x, y, cx, cy)
 		endRot()
 	})
@@ -47,7 +47,7 @@ function MyPattern() {
                   if (fn) {
                         fn(x, y, cellX, cellY)
                   } else {
-                        beginRot(freq(0.01), x, y)
+                        beginRot(counter(), x, y)
                         rect(x, y, cellX, cellY)
                         endRot()
                   }

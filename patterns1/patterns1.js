@@ -9,6 +9,7 @@ Create a grid
 
 code:
 
+// 1
 snip('patterns1') // Evaluar para cargar snippet / Eval for load snippet
 
 function setup() {
@@ -31,6 +32,27 @@ function draw() {
             // ----------------------
 
 	})
+}
+
+// 2
+
+snip('patterns1')
+
+function draw() {
+	//displace(0, -10)
+	fade(10)
+	zoom(0.01)
+	let i = 0
+	MyPattern(100, 100, (x, y, cx, cy) => {
+		stroke(255)
+		strokeWeight(0.5)
+		fill(255)
+		beginRot(counter(0.1), x + sinOsc(0.01) * 200, y)
+		rect(x + sinOsc(i * 0.01) * 20, y, 20, 200)
+		endRot()
+		i++
+	})
+	kaleido()
 }
 */
 function MyPattern() {
